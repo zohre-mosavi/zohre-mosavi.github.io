@@ -14,20 +14,26 @@
 <body>
     <div class="content">
         <div class="box-cotent">
-            <section class="dir-left">
-                <div class="d-flex w-100">
-                    <img src="./img/logo.png" width="100px" height="80px" />
-                    <b style="color:blue;" class="d-flex align-items-center captio-logo">ACTIVA</b>
+            <section class="left">
+
+                <div class="top-row">
+                    <div class="header">
+                        <a href="#" class="logo">
+                            <img src="./img/logo.png" class="img-logo" />
+                            <span class="caption-logo">ACTIVA</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="d-flex flex-column align-items-center mt-5">
-                    <img src="./img/login.svg" width="70%" class="" />
+
+                <div class="left-img">
+                    <img src="./img/login.svg"/>
                     <b class="caption">start for free and get<br />attractive offers</b>
                 </div>
             </section>
-            <section class="dir-right">
+            <section class="right">
                 <h1><b>Get's started.</b></h1>
-                <small>Already have an account?<span class="red-text">Log in</span></small>
-                <div class="d-flex justify-content-between mt-3 mb-4">
+                <small>Already have an account?<a href="#" class="red-text Login">Log in</a></small>
+                <div class="buttons-signup">
                     <button>
                         <img src="./img/Google-Logo.png" width="20px" alt="google-logo" />
                         <span>sign up with Google</span>
@@ -38,27 +44,27 @@
                     </button>
                 </div>
 
-                <div class="d-flex opacity">
-                    <hr />
-                    <span class="">or</span>
-                    <hr />
+                <div class="line">
+                    <span>or</span>
                 </div>
 
                 <form>
                     <div class="form-group">
-                        <label>Email address</label><br />
-                        <input type="text" class="input-text" id="email" placeholder="example@gmail.com" />
+                        <label for="email">Email address</label>
+                        <input type="text" name="email" id="email" class="input-text email" placeholder="example@gmail.com" />
                     </div>
                     <div class="form-group">
-                        <label>Password</label><br />
-                        <input type="password" class="input-text" id="pass" />
+                        <label for="pass">Password</label><br />
+                        <input type="password" name="pass" id="pass" class="input-text pass"/>
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" />
-                        <small>I agree Platform's<span class="red-text">Terms of Service</span> and <span
-                                class="red-text">Privacy Policy</span></small>
+                        <input type="checkbox" name="checked" id="checked" />
+                        <label for="checked" class="checked">I agree Platform's<span class="red-text">Terms of Service</span> and <span
+                                class="red-text">Privacy Policy</span></label>
                     </div>
-                    <input type="submit" value="Register" class="Register-button" />
+                    <div class="form-group">
+                        <input type="submit" value="Register" class="Register-button" />
+                    </div>
                 </form>
             </section>
         </div>

@@ -12,26 +12,66 @@
     align-items: center;
 }
 .box-cotent{
-    width: 70%;
+    width: 75%;
     min-height: 80vh;
     height: auto;
     display: flex;
     justify-content: space-between;
 }
 
-.dir-left{
+
+.left{
+    position: relative;
     background-color:#D8E3E9 ;
     width: 50%;
     border-radius: 10px 0 0 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    justify-content: center;
 }
 
-.captio-logo{
-    
+.top-row{
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
 }
+.left-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-img img{
+    width: 70%;
+}
+
+.header{
+    align-self: flex-start;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+}
+
+.img-logo{
+    width: 100px;
+    height: 80px;
+}
+
+.caption-logo{
+    display: flex;
+    align-items: center;
+    color: blue;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none !important;
+  }
 
 .caption{
     color: #2F2E41;
@@ -40,11 +80,11 @@
     margin:15px 0 0 0;
 }
 
-.dir-right{
+.right{
     background-color: white;
     width: 50%;
     border-radius: 0 10px 10px 0;
-    padding: 50px 50px 50px 50px;
+    padding: 50px;
     /* overflow: scroll; */
 }
 
@@ -60,6 +100,16 @@ small{
     color: red;
 }
 
+.Login{
+    padding: 8px;
+}
+
+.buttons-signup{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
 button{
     border-radius: 7px !important;
     border: 1px solid #DCDCDC!important;
@@ -69,17 +119,24 @@ button{
     justify-content: space-evenly;
     width: 48%;
     height: 40px;
-    font-size: 14px !important;
+    font-size: 13px !important;
 }
 
 hr{
     width: 44%;
 }
 
-.opacity{
-    display: flex;
-    justify-content: space-between;
-    opacity: 0.5;
+.line{
+    border-bottom: 1px solid black;
+    text-align: center;
+    margin: 10px 0;
+    opacity: 0.2;
+    line-height: 0.1em;
+}
+
+.line span{
+    background-color: white;
+    padding: 10px;
 }
 
 .input-text{
@@ -103,7 +160,7 @@ hr{
 }
 
 
-#email{
+.email{
     background-image: url(./img/mail.png);
     background-size: 18px;
     background-repeat: no-repeat;
@@ -112,13 +169,18 @@ hr{
     font-size: 13px;
 }
 
-#pass{
+.pass{
     background-image: url(./img/lock.png);
     background-size: 18px;
     background-repeat: no-repeat;
     background-position: 13px 9px;
     padding-left: 40px;
     font-size: 13px;
+}
+
+.checked{
+    font-size: 13px;
+    display: inline;
 }
 
 button:hover{
@@ -130,16 +192,26 @@ button:hover{
     font-size: 17px;
 }
 
-@media (min-width: 420px) and (max-width:1024px) {
-    .dir-right {
+@media (min-width: 411px) and (max-width:1024px) {
+    .right {
       width: 100%;
       border-radius: 10px ;
     }
   }
 
+  @media(min-width:1025px ) and (max-width:1200px)
+  {
+      .buttons-signup{
+          display: flex;
+          flex-direction: column  !important;
+      }
+      button{
+          width: 100% !important;
+      }
+  }
   
   @media (max-width: 1024px) {
-    .dir-right {
+    .right {
       min-height: 50%;
       height: 100%;
       padding: 20px;
@@ -149,13 +221,39 @@ button:hover{
         font-size: 12px;
     }
     
-    .dir-left {
+    .left {
       display: none;
     }
   }
 
   @media (max-height:500px){
       .box-cotent{
-          margin:20px 0 20px 0;
+          margin:10px;
       }
+  }
+
+  @media(max-width:500px)
+  {
+      .right{
+        width: 100%;
+        border-radius: 10px ;
+      }
+      .buttons-signup{
+        flex-direction: column;
+        width: 100%;    
+    }
+    .buttons-signup button{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+  }
+  @media(min-width:1024px) and(max-width:1247px){
+    .buttons-signup{
+        flex-direction: column;
+        width: 100%;    
+    }
+    .buttons-signup button{
+        width: 100%;
+        margin-bottom: 5px;
+    }
   }
