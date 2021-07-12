@@ -17,6 +17,7 @@
     height: auto;
     display: flex;
     justify-content: space-between;
+    margin: 20px 0;
 }
 
 
@@ -116,10 +117,13 @@ button{
     background-color: white;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
     width: 48%;
     height: 40px;
     font-size: 13px !important;
+}
+
+button img{
+    margin:0 12px 0 10px;
 }
 
 hr{
@@ -144,10 +148,6 @@ hr{
     height: 40px;
     border-radius: 7px;
     border: 1px solid #DCDCDC;
-}
-
-.input-text:hover{
-    border: 0.1rem solid #425c81;
 }
 
 .Register-button{
@@ -185,11 +185,16 @@ hr{
 
 button:hover{
     box-shadow: 5px 5px 8px #DCDCDC ;
+    transition: box-shadow 0.3s ease-in-out;    
 }
 
 .Register-button:hover{
     background-color:#436c87 ;
     font-size: 17px;
+}
+
+a:hover{
+    color:red !important;
 }
 
 @media (min-width: 411px) and (max-width:1024px) {
@@ -207,6 +212,7 @@ button:hover{
       }
       button{
           width: 100% !important;
+          margin-top: 8px !important;
       }
   }
   
